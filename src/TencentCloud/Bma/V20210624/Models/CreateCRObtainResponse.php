@@ -18,33 +18,26 @@ namespace TencentCloud\Bma\V20210624\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeBPFakeURLs返回参数结构体
+ * CreateCRObtain返回参数结构体
  *
- * @method array getFakeURLInfos() 获取仿冒网址列表
- * @method void setFakeURLInfos(array $FakeURLInfos) 设置仿冒网址列表
- * @method integer getTotalCount() 获取总量
- * @method void setTotalCount(integer $TotalCount) 设置总量
- * @method string getExportURL() 获取导出量
- * @method void setExportURL(string $ExportURL) 设置导出量
+ * @method integer getTortId() 获取侵权ID
+ * @method void setTortId(integer $TortId) 设置侵权ID
+ * @method string getTortNum() 获取xxx
+ * @method void setTortNum(string $TortNum) 设置xxx
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeBPFakeURLsResponse extends AbstractModel
+class CreateCRObtainResponse extends AbstractModel
 {
     /**
-     * @var array 仿冒网址列表
+     * @var integer 侵权ID
      */
-    public $FakeURLInfos;
+    public $TortId;
 
     /**
-     * @var integer 总量
+     * @var string xxx
      */
-    public $TotalCount;
-
-    /**
-     * @var string 导出量
-     */
-    public $ExportURL;
+    public $TortNum;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +45,8 @@ class DescribeBPFakeURLsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FakeURLInfos 仿冒网址列表
-     * @param integer $TotalCount 总量
-     * @param string $ExportURL 导出量
+     * @param integer $TortId 侵权ID
+     * @param string $TortNum xxx
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,21 +62,12 @@ class DescribeBPFakeURLsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FakeURLInfos",$param) and $param["FakeURLInfos"] !== null) {
-            $this->FakeURLInfos = [];
-            foreach ($param["FakeURLInfos"] as $key => $value){
-                $obj = new FakeURLInfo();
-                $obj->deserialize($value);
-                array_push($this->FakeURLInfos, $obj);
-            }
+        if (array_key_exists("TortId",$param) and $param["TortId"] !== null) {
+            $this->TortId = $param["TortId"];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("ExportURL",$param) and $param["ExportURL"] !== null) {
-            $this->ExportURL = $param["ExportURL"];
+        if (array_key_exists("TortNum",$param) and $param["TortNum"] !== null) {
+            $this->TortNum = $param["TortNum"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
