@@ -18,20 +18,20 @@ namespace TencentCloud\Bma\V20221115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBPFakeAPPList请求参数结构体
+ * DeleteBPWhiteList请求参数结构体
  *
- * @method string getFakeAPPs() 获取批量模版
- * @method void setFakeAPPs(string $FakeAPPs) 设置批量模版
+ * @method integer getWhiteListId() 获取白名单id
+ * @method void setWhiteListId(integer $WhiteListId) 设置白名单id
  */
-class CreateBPFakeAPPListRequest extends AbstractModel
+class DeleteBPWhiteListRequest extends AbstractModel
 {
     /**
-     * @var string 批量模版
+     * @var integer 白名单id
      */
-    public $FakeAPPs;
+    public $WhiteListId;
 
     /**
-     * @param string $FakeAPPs 批量模版
+     * @param integer $WhiteListId 白名单id
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class CreateBPFakeAPPListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FakeAPPs",$param) and $param["FakeAPPs"] !== null) {
-            $this->FakeAPPs = $param["FakeAPPs"];
+        if (array_key_exists("WhiteListId",$param) and $param["WhiteListId"] !== null) {
+            $this->WhiteListId = $param["WhiteListId"];
         }
     }
 }

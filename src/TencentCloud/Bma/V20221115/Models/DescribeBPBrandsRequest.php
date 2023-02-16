@@ -18,20 +18,16 @@ namespace TencentCloud\Bma\V20221115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBPFakeAPPList请求参数结构体
+ * DescribeBPBrands请求参数结构体
  *
- * @method string getFakeAPPs() 获取批量模版
- * @method void setFakeAPPs(string $FakeAPPs) 设置批量模版
+
  */
-class CreateBPFakeAPPListRequest extends AbstractModel
+class DescribeBPBrandsRequest extends AbstractModel
 {
-    /**
-     * @var string 批量模版
-     */
-    public $FakeAPPs;
+
 
     /**
-     * @param string $FakeAPPs 批量模版
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class CreateBPFakeAPPListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FakeAPPs",$param) and $param["FakeAPPs"] !== null) {
-            $this->FakeAPPs = $param["FakeAPPs"];
-        }
+
     }
 }
